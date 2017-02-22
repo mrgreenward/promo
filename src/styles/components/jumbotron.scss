@@ -1,0 +1,32 @@
+.jumbotron{
+  word-break: break-all;
+  max-width: 500px;
+  &__btn{
+    margin-top: 1.5em;
+  }
+}
+.title{
+  font: $big-title;
+  margin: 0.222em 0;
+}
+.title-md{
+  font: $med-title;
+  margin: 0.325em 0;
+}
+@media all and (max-width: $breakpoint-lg-tablet){
+  .jumbotron{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    &__btn{
+      margin-top: 3.0em;
+    }
+  }
+  .title{
+    font: $big-title-mob;
+  }
+  .title-md{
+    font: $med-title-mob;
+  }
+}

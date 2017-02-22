@@ -1,0 +1,30 @@
+.slider{
+  position: relative;
+  padding: 1em 0;
+  width: 100%;
+  &__count{
+    text-align: left;
+    margin-left: 1em;
+    font-weight:600;
+  }
+  &__line{
+    display: inline-block;
+    width: 50%;
+    border: 1px solid $button-primary;
+  }
+  &__line--gray{
+    display: inline-block;
+    width: 19%;
+    border: 1px solid $gray;
+  }
+  &__circle{
+    position: absolute;
+    right: 45%;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: $button-primary;
+    border-radius: 15px;
+  }
+
+}

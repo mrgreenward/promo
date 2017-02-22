@@ -1,0 +1,33 @@
+//fonst
+$primary-font: 'Roboto', sans-serif;
+
+$big-title: 100 2.813em $primary-font;
+$med-title: 100 1.750em $primary-font;
+$small-title: 400  1.2em $primary-font;
+$button-text: 400 1.2em $primary-font;
+
+//taplet
+$big-title-mob: 100 2.013em $primary-font;
+$med-title-mob: 100 1.45em $primary-font;
+$button-tex-mob: 400 1em $primary-font;
+
+//colors
+$headtitle-color: rgba(236, 198, 39, 0.94);
+$dropdown-color: #fff28f;
+$dropdown-hover: #fae658;
+$bg-primary: rgba(255, 192, 203, 0.13);
+
+$button-primary: #eed30a;
+$button-primary--hover: #e2c80a;
+
+
+$gray: #9c9c9c;
+$black: #000000;
+$black-hovered: #9c9c9c;
+
+// breakpoints
+$breakpoint-tablet: 48em;
+$breakpoint-lg-tablet: 59.938em;
+
+// elements
+$line:1px solid rgba(228, 227, 224, 0.65);

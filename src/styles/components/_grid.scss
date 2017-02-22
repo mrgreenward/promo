@@ -1,0 +1,10 @@
+.grid{
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    flex: 1;
+    padding: 1.250rem;
+  }
+}

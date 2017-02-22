@@ -1,1 +1,18 @@
-@import "../../src/blocks/common/header/header";
+@import "vendors/burger";
+@import "helpers/normalize";
+@import "helpers/variables";
+@import "base/base";
+
+@import "components/grid";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/dropdown-menu";
+@import "components/jumbotron";
+@import "components/services";
+@import "components/b-article";
+@import "components/b-article";
+@import "components/section";
+@import "components/slider";
+
+@import "layout/header";
+@import "layout/_page-sections";

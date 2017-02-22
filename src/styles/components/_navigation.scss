@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.5s;
+  align-items: baseline;
+  @media all and (max-width: $breakpoint-lg-tablet) {
+    display: none;
+    min-width: 13.625em;
+    max-width: 15.625em;
+    word-break: break-all;
+    transition: 0.5s;
+    flex-direction: column;
+  }
+  &__item {
+    margin: 1.2em 0 0 0 ;
+    @media all and (max-width: $breakpoint-lg-tablet) {
+      margin: 1.2em 0 1.2em 0 ;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 2.786em;
+    @media all and (max-width: $breakpoint-lg-tablet) {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    font-size: 0.875em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s;
+    &:hover {
+      color: $black-hovered;
+    }
+    @media all and (max-width: $breakpoint-lg-tablet) {
+      font-size: 1.175em;
+    }
+  }
+  &-js{
+    @media all and (max-width: $breakpoint-lg-tablet) {
+      transition: 0.5s;
+      display: block;
+    }
+  }
+}

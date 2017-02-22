@@ -1,0 +1,62 @@
+<div class="b-page__section b-page__section--header">
+    <div class="header">
+        <h2 class="header__title"><span class="header__slash">/  </span>Современное такси</h2>
+        <script>
+            $(document).ready(function(){
+                (function () {
+                    var menuButton = $('.menu-button-js'),
+                            list = $('.nav');
+                    menuButton.on('click', function (e) {
+                        e.preventDefault();
+                        menuButton.toggleClass('is-active');
+                        list.toggleClass('nav-js')
+                    });
+                })();
+                (function () {
+                    $('.dropdown-menu__link').on('click',function () {
+                        $('.arrow-down').toggleClass('arrow-up')
+                        $('.dropdown-list').slideToggle('fast')
+                    })
+                })();
+            })
+        </script>
+        <a href="#" class="header__burger menu-button-js">
+            <span class="burger-icon"></span>
+        </a>
+        <ul class="header__menu nav">
+            <li class="nav__item ">
+                <div class="dropdown-menu">
+                    <a href="#" class="nav__link dropdown-menu__link">Санкт-Петербург<div class="arrow-down"></div>
+                    </a>
+                    <ul class="dropdown-menu__list dropdown-list">
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Казань</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Набережные Челны</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Севастополь</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Краснодар</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Владивосток</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Сочи</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Условия работы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Требования</a></li>
+        </ul>
+    </div>
+    <div class="header__action">
+        <div class="jumbotron">
+            <h1 class="title">Есть автомобиль?</h1>
+            <h2 class="title-md">Зарабатывай до <b>70 000</b> р.</h2>
+            <button class="btn btn--primary jumbotron__btn ">Подключить за 5 минут</button>
+        </div>
+    </div>
+    <div class="header__order-types">
+        <div class="services">
+            <div class="b-icons services__icons">
+                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
+                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
+                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
+            </div>
+            <p class="services__text">Три службы заказа такси в одном приложении</p>
+        </div>
+    </div>
+</div>

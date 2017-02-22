@@ -11,10 +11,12 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
+    bust = require('gulp-buster'),
     argv = require('yargs').argv, //передача параметров таска из консоли
     gulpIfElse = require('gulp-if'); // c помощью него разделяю окружение //.pipe( ifElse(condition, ifCallback, elseCallback) )
 
  //gulp --dev , gulp --production
+
 
 var path = {
     dist : {
@@ -33,7 +35,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: 'src/js/**/*.js',
         style: 'src/styles/style.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'

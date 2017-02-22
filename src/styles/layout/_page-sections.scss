@@ -1,0 +1,25 @@
+.b-page__section{
+  padding: 6.875rem 5.625rem;
+  @media all and (max-width: $breakpoint-tablet) {
+    padding: 6.875rem 1.25rem 4.625rem 0.6rem;
+  }
+}
+.b-page__section--header{
+  min-height: 615px;
+  border-bottom: $line;
+  padding: 1.250rem  5.625rem;
+  @media all and (max-width: $breakpoint-tablet) {
+    padding: 1.250rem;
+  }
+}
+.b-page-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media all and (max-width: $breakpoint-lg-tablet) {
+    display: none;
+  }
+}
+.b-page__section--colored{
+  background-color: $bg-primary;
+}

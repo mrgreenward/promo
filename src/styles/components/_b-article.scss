@@ -1,0 +1,40 @@
+.b-article{
+  display: flex;
+  max-width: 290px;
+  min-width: 260px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  &__img{
+    width: 125px;
+    height:125px;
+    border: 1px solid $gray;
+    border-radius: 50%;
+    margin-bottom: 0.9em;
+  }
+  &__text{
+    color: $gray;
+    line-height: 1.3;
+    margin:0.338em 0 ;
+    &--upper{
+      text-transform: uppercase;
+    }
+    &--sm{
+      font-size: 0.9em;
+      font-weight: 100;
+    }
+  }
+  &--aligned-left{
+    align-items: flex-start;
+    text-align: left;
+  }
+  &--aligned-right{
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+.article-title{
+ font: $small-title;
+  margin: 0.781em 0;
+}

@@ -1,0 +1,26 @@
+.section{
+  word-wrap: break-word;
+  &__title{
+    text-align: center;
+    margin-bottom: 0.4em;
+  }
+}
+.details{
+  width: 100%;
+}
+.table-details{
+  width: 100%;
+  & td{
+    padding: 0.45em 0.45em 0 0;
+    line-height: 1.2;
+  }
+}
+.section-logo{
+  width: 300px;
+  height: 300px;
+  margin-left: 4em;
+  border: 1px solid $gray;
+}
+.section-col{
+  min-width: 45%;
+}
