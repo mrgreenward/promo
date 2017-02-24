@@ -1,0 +1,66 @@
+.form{
+background: $bg-primary;
+  position: relative;
+  &__wrap{
+    min-width: 200px;
+    max-width: 316px;
+    margin: 0.9em;
+    word-break: break-word;
+    display: flex;
+    flex-direction: row;
+  flex-wrap: wrap;
+    margin: 0 auto 1em auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__wrap--text{
+    margin-top: 2.5em;
+  }
+  &__wrap--city{
+    position: relative;
+    align-items: baseline;
+  }
+  &__item:first-child{
+    flex:2;
+  }
+  &__btn{
+    width: 100%;
+    padding: 0.7em 1.842em;
+  }
+}
+.label{
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.input{
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  border:1px solid $gray-light;
+  padding: 1em;
+}
+.descr{
+  font-weight: 100;
+}
+.form-grid{
+flex-direction: column;
+}
+.b-article__link{
+  margin: 1em 0;
+  font-size: 0.9em;
+}
+.form__city{
+  position: absolute;
+  right: -10px;
+  top: 10px;
+  width: 162px;
+  word-break: break-all;
+}
+.form__city-list{
+  position: absolute;
+}
+@media all and (min-width: $breakpoint-sm) {
+  .form-grid{
+    flex-direction: row;
+  }
+  }

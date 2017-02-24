@@ -1,7 +1,7 @@
 .services{
   display: flex;
   max-width: 24.750em;
-  margin: 6.7em 0 0.450em 0;
+  margin: 11.7em 0 0.450em 0;
   word-break: break-all;
   &__text{
     margin-left: 1.250em;
@@ -12,17 +12,16 @@
   display: flex;
   min-width: 11.125em;
   flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
 &__el{
-  width: 44px;
-  height: 44px;
-  border: 1px solid gray;
-  border-radius: 25px;
+  max-width: 100%;
 }
   &__el:not(:last-child){
     margin:0 1.250em 1.250em 0;
   }
 }
-@media all and (max-width: $breakpoint-tablet){
+@media all and (max-width: $breakpoint-lg-tablet){
   .services{
     display: none;
   }

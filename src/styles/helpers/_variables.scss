@@ -4,30 +4,43 @@ $primary-font: 'Roboto', sans-serif;
 $big-title: 100 2.813em $primary-font;
 $med-title: 100 1.750em $primary-font;
 $small-title: 400  1.2em $primary-font;
+$article-title-md: 1.4em;
+
 $button-text: 400 1.2em $primary-font;
 
 //taplet
 $big-title-mob: 100 2.013em $primary-font;
 $med-title-mob: 100 1.45em $primary-font;
+
 $button-tex-mob: 400 1em $primary-font;
+
 
 //colors
 $headtitle-color: rgba(236, 198, 39, 0.94);
-$dropdown-color: #fff28f;
-$dropdown-hover: #fae658;
+$white: #ffffff;
+$dropdown-hover: rgba(220, 202, 59, 0.29);
 $bg-primary: rgba(255, 192, 203, 0.13);
 
 $button-primary: #eed30a;
 $button-primary--hover: #e2c80a;
 
+$gradient-primary: linear-gradient(274deg, rgba(190, 225, 238, 0.11) 0%, rgba(0, 128, 128, 0.28) 100%);
+$gradient-secondary: linear-gradient(274deg, rgba(190, 225, 238, 0.11) 0%, rgba(192, 158, 146, 0.32) 100%);
 
 $gray: #9c9c9c;
+$gray-light: #d3d1d1;
 $black: #000000;
 $black-hovered: #9c9c9c;
 
+$shadow: 10px 11px 18px -9px rgba(0,0,0,0.75);
+
 // breakpoints
-$breakpoint-tablet: 48em;
-$breakpoint-lg-tablet: 59.938em;
+$breakpoint-tablet: 48rem;
+$breakpoint-lg-tablet: 59.938rem;
+$breakpoint-sm : 30.000rem;
+$breakpoint-md: 45.000rem;
+$breakpoint-lg: 60.000rem;
 
 // elements
+$button-sm: 0.8em;
 $line:1px solid rgba(228, 227, 224, 0.65);

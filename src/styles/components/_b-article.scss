@@ -5,13 +5,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 1.250em;
+  word-break: break-word;
   &__img{
     width: 125px;
     height:125px;
-    border: 1px solid $gray;
-    border-radius: 50%;
-    margin-bottom: 0.9em;
+    margin: 0;
+  }
+  &__img--gadget{
+    width: 256px;
+    height: 504px;
+    border-radius: 0 ;
+  }
+  &__img--icon{
+    width: 88px;
+    height: 88px;
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 1em;
   }
   &__text{
     color: $gray;
@@ -22,6 +33,10 @@
     }
     &--sm{
       font-size: 0.9em;
+      font-weight: 100;
+    }
+    &--md{
+      font-size: 1.063em;
       font-weight: 100;
     }
   }
@@ -37,4 +52,31 @@
 .article-title{
  font: $small-title;
   margin: 0.781em 0;
+  &--md{
+    font-size: $article-title-md;
+  }
+}
+.icon-img{
+  display: inline-block;
+  margin-right: 2em;
+}
+.google-play{
+  width: 113px;
+  height: 30px;
+}
+.telegram{
+  width: 30px;
+  height:30px;
+}
+.telegram-mob{
+  max-width: 100%;
+}
+.geo{
+max-width: 100%;
+}
+
+@media all and (max-width: $breakpoint-lg) {
+  .b-article{
+    margin: 0 auto;
+  }
 }

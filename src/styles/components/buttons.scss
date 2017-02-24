@@ -5,6 +5,9 @@
    padding:1em 1.842em;
    font: $button-text;
    border-radius: 6px;
+  &--sm{
+    font-size: $button-sm;
+  }
   &--primary{
     background-color: $button-primary;
   }
@@ -21,5 +24,8 @@
 @media all and (max-width: $breakpoint-lg-tablet){
   .btn{
     font: $button-tex-mob;
+    &--sm{
+      font-size: 0.9em;
+    }
 ;}
 }

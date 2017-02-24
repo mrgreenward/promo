@@ -1,15 +1,22 @@
 .b-page__section{
   padding: 6.875rem 5.625rem;
-  @media all and (max-width: $breakpoint-tablet) {
-    padding: 6.875rem 1.25rem 4.625rem 0.6rem;
+  @media all and (max-width: $breakpoint-lg-tablet) {
+    padding: 2.875rem 1.25rem 1.625rem 0.6rem;
   }
 }
 .b-page__section--header{
   min-height: 615px;
+  background:url("../img/main-desk.jpg") no-repeat no-repeat;
+  background-size: cover;
+  background-position: 100% 0;
   border-bottom: $line;
   padding: 1.250rem  5.625rem;
-  @media all and (max-width: $breakpoint-tablet) {
+  @media all and (max-width: $breakpoint-lg-tablet) {
     padding: 1.250rem;
+    background:url("../img/main-mob.jpg") no-repeat no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: 100% 0;
   }
 }
 .b-page-wrapper{
@@ -22,4 +29,7 @@
 }
 .b-page__section--colored{
   background-color: $bg-primary;
+}
+@media all and (max-width: $breakpoint-lg-tablet) {
+  display: none;
 }

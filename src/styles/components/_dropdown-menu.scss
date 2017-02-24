@@ -23,9 +23,10 @@
   width: 12.063rem;
   word-wrap: break-word;
   margin: 0.5em;
-  background-color: $dropdown-color;
+  background-color: $white;
   border: 1px solid rgba(201, 201, 201, 0.43);
   border-radius: 6px;
+  box-shadow: $shadow;
   display: none;
   &__link{
     width: inherit;

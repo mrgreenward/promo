@@ -13,9 +13,11 @@
                     });
                 })();
                 (function () {
-                    $('.dropdown-menu__link').on('click',function () {
-                        $('.arrow-down').toggleClass('arrow-up')
-                        $('.dropdown-list').slideToggle('fast')
+                    $('.dropdown-menu__link').on('click',function (e) {
+                        e.preventDefault();
+                        var root = $(this).parent();
+                        $('.arrow-down',root).toggleClass('arrow-up')
+                        $('.dropdown-list',root).slideToggle('fast')
                     })
                 })();
             })
@@ -52,9 +54,9 @@
     <div class="header__order-types">
         <div class="services">
             <div class="b-icons services__icons">
-                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
-                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
-                <div class="b-icons__el"><img class="icon-item" src="" alt=""></div>
+                <div class="b-icons__el"><img class="icon-item" src="img/Uber.png" alt=""></div>
+                <div class="b-icons__el"><img class="icon-item" src="img/Gett.png" alt=""></div>
+                <div class="b-icons__el"><img class="icon-item" src="img/" alt=""></div>
             </div>
             <p class="services__text">Три службы заказа такси в одном приложении</p>
         </div>
