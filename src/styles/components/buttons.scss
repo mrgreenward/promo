@@ -23,6 +23,7 @@
  }
 @media all and (max-width: $breakpoint-lg-tablet){
   .btn{
+    content: '';
     font: $button-tex-mob;
     &--sm{
       font-size: 0.9em;
