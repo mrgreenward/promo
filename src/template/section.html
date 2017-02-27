@@ -160,11 +160,16 @@
                 <div class="grid__item grid__item--sm">
                     <div class="grid b-vidget">
                         <div class="grid__row grid__row--sm">
+                            <script>
+                                $(document).ready(function() {
+                                   $(' .btn--js-look') .Modal();
+                                })
+                            </script>
                             <div class="grid__item">
                                 <div class="b-vidget__type">
                                     <img src="img/uber-logo.svg" width="91px" height="32px" class="b-vidget__name">
                                 </div>
-                                <button class="btn btn--sm btn--primary b-vidget__btn">Смотреть</button>
+                                <button class="btn btn--sm btn--primary b-vidget__btn btn--js-look">Смотреть</button>
                             </div>
                             <div class="grid__item">
                                 <div class="b-vidget__icon">
