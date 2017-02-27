@@ -1,16 +1,12 @@
 .b-vidget{
   position: relative;
   max-width: 363px;
-  min-width: 280px;
+  min-width: 320px;
   margin: 0 auto;
   min-height: 200px;
   background: $gradient-primary;
   border-radius: 10px;
   padding: 0.313em 0.313em 0 0.313em;
-  &__video-icon{
-    width: 143px;
-    height: 170px;
-  }
   &--sec{
     background: $gradient-secondary;
   }
@@ -18,23 +14,29 @@
     margin-top: 5.125em;
   }
   &__icon{
+      max-width: 143px;
+      height: 170px;
+
     position: absolute;
     bottom: 0;
+    max-width: 144px;
+    min-width: 100px;
   }
 }
 .icon-gadget{
-  width: 143px;
+  width: 100%;
   height: 170px;
   border-radius: 15px;
 }
-@media all and (max-width: $breakpoint-tablet) {
-  .b-vidget__video-icon{
-    width: 123px;
-    height: 170px;
+@media all and (max-width: 512px) {
+  .b-vidget{
+    max-width: 300px;
+    min-width: 280px;
+    &__icon{
+    max-width: 80px;
   }
-  .icon-gadget{
-    width: 123px;
-    height: 170px;
-    border-radius: 15px;
+    &__btn{
+      font-size: 0.7em;
+    }
   }
 }

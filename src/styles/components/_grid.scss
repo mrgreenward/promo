@@ -1,7 +1,7 @@
 .grid {
   &__row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     &--nowrap{
       flex-wrap: nowrap;
@@ -10,14 +10,15 @@
   &__item {
     flex: 1;
     word-break: break-all;
+    padding: 12px;
     padding: 1.250rem;
     &--top-indent {
       margin-top: 4em;
     }
-    &__non-indent{
+    &--sm{
       @media all and (max-width: 600px) {
-        padding-left: 0;
         padding-right: 0;
+        padding-left: 0;
       }
     }
     &--visible{
@@ -27,16 +28,28 @@
     }
   }
 }
+
 .grid--desktop{
   display: none;
 }
 .grid--taplet{
   display: block;
 }
+@media all and (min-width: $breakpoint-ext-sm) {
+  .grid__row {
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    & > div {
+      flex: 1;
+    }
+  }
+}
   @media all and (min-width: $breakpoint-sm) {
     .grid__row--sm {
       flex-direction: row;
     }
+
   }
   @media all and (min-width: $breakpoint-md) {
     .grid__row--md {

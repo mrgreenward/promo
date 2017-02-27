@@ -7,6 +7,9 @@
   text-align: center;
   margin: 0 auto 1.250em;
   word-break: break-word;
+  &__wrap{
+    width: 100%;
+  }
   &__img{
     width: 125px;
     height:125px;
@@ -28,8 +31,7 @@
     color: $gray;
     line-height: 1.3;
     margin:0.338em 0 ;
-    max-width:100%;
-    word-break: keep-all;
+    text-decoration: none;
     &--upper{
       text-transform: uppercase;
     }
@@ -50,6 +52,14 @@
     align-items: flex-end;
     text-align: right;
   }
+  &__footer{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 100;
+  }
+}
+a.b-article__text:hover{
+  color: $black;
 }
 .article-title{
  font: $small-title;

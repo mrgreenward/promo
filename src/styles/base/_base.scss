@@ -10,4 +10,7 @@ body{
 .b-page{
   max-width: 1600px;
   margin: 0 auto;
+  &__footer-title{
+    margin: 1em 0;
+  }
 }

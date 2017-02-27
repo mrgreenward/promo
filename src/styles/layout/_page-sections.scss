@@ -30,6 +30,20 @@
 .b-page__section--colored{
   background-color: $bg-primary;
 }
-@media all and (max-width: $breakpoint-lg-tablet) {
-  display: none;
+.b-page__section--sm-padding{
+  padding: 2.9em 5.625rem;
+  @media all and (max-width: $breakpoint-lg-tablet) {
+    padding: 1.250rem;
+  }
+}
+.b-page__section--footer{
+  position: relative;
+  background: url("../img/City.svg")center 100% no-repeat no-repeat;
+  background-color: $bg-primary;
+  min-height: 558px;
+  @media all and (max-width: $breakpoint-sm) {
+    min-height: 659px;
+    background: url("../img/CityMobile.svg")center 100% no-repeat no-repeat;
+    background-color: $bg-primary;
+  }
 }

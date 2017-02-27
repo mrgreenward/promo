@@ -1,0 +1,9 @@
+.footer{
+  &__item{
+    align-items: center;
+    @media all and (min-width: $breakpoint-md) {
+      align-items: flex-start;
+    }
+  }
+
+}
