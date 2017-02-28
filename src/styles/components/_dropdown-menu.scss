@@ -19,6 +19,7 @@
   position: absolute;
 }
 .dropdown-list{
+  position: absolute;
   border: 1px solid gray;
   width: 12.063rem;
   word-wrap: break-word;
@@ -28,16 +29,20 @@
   border-radius: 6px;
   box-shadow: $shadow;
   display: none;
-  &__link{
-    width: inherit;
+  &__label{
+    width:inherit;
+    border: none;
     display: block;
     line-height: 1.2;
     text-decoration: none;
-    padding:0.4em;
+    padding:0.4em 0.6em;
     color:$black;
     font-size: 0.9em;
   }
-  &__link:hover{
+  &__radio{
+    display: none;
+  }
+  &__label:hover{
     background-color: $dropdown-hover;
   }
 }
@@ -46,7 +51,7 @@
     position: relative;
   }
   .dropdown-menu__list{
-    position: relative;
+    position: absolute;
     max-width: 12.063rem;
     margin: 0.5em 0;
   }

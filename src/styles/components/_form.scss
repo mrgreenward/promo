@@ -22,6 +22,7 @@ background: $bg-primary;
   &__wrap--city{
     position: relative;
     align-items: baseline;
+    margin-bottom: 1em;
   }
   &__item:first-child{
     flex:2;
@@ -41,6 +42,15 @@ background: $bg-primary;
   margin-top: 3px;
   border:1px solid $gray-light;
   padding: 1em;
+  &--error{
+    border: 1px solid $error;
+    &::placeholder{
+      color: $error;
+    }
+  }
+  &--success{
+    border: 1px solid $success;
+  }
 }
 .descr{
   font-weight: 100;

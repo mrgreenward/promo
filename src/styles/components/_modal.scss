@@ -1,8 +1,10 @@
 .modal{
+  display: none;
   transition: 1s linear;
   z-index: 999;
   max-width: 650px;
   padding: 1em;
+  margin: 1em;
   max-height: 450px;
   background: $white;
   position: fixed;
@@ -12,6 +14,9 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  @media all and (max-width: $breakpoint-md) {
+    margin: auto 1em;
+  }
   &__close{
     float:right;
     cursor: pointer;
@@ -19,12 +24,17 @@
   &__title{
     margin: 1em 0;
   }
-  &--js{
-    display: none;
-  }
+
   &-js--open{
     z-index: 999;
     display: block;
+  }
+  &__content{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
   }
 }.modal-backdrop{
   display: none;
@@ -38,4 +48,11 @@
    top: 0;
    right: 0;
    bottom: 0;
+ }
+ .modal__content iframe{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
  }

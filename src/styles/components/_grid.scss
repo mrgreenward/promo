@@ -21,6 +21,10 @@
         padding-left: 0;
       }
     }
+    &--drivers{
+      background-color: $white;
+      padding-left: 2.3em;
+    }
     &--visible{
       @media all and (max-width: 1100px) {
         display: none;

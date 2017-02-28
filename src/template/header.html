@@ -1,49 +1,31 @@
 <div class="b-page__section b-page__section--header">
     <div class="header">
         <h2 class="header__title"><span class="header__slash">/  </span>Современное такси</h2>
-        <script>
-            $(document).ready(function(){
-                (function () {
-                    var menuButton = $('.menu-button-js'),
-                            list = $('.nav');
-                    menuButton.on('click', function (e) {
-                        e.preventDefault();
-                        menuButton.toggleClass('is-active');
-                        list.toggleClass('nav-js')
-                    });
-                })();
-                (function () {
-                    $('.dropdown-menu__link').on('click',function (e) {
-                        e.preventDefault();
-                        var root = $(this).parent();
-                        $('.arrow-down',root).toggleClass('arrow-up');
-                        $('.dropdown-list',root).slideToggle('fast');
-                    })
-                })();
-            })
-        </script>
         <a href="#" class="header__burger menu-button-js">
             <span class="burger-icon"></span>
         </a>
         <ul class="header__menu nav">
             <li class="nav__item ">
                 <div class="dropdown-menu">
-                    <a href="#" class="nav__link dropdown-menu__link">Санкт-Петербург<div class="arrow-down"></div>
+                    <a href="#" class="nav__link nav__link--title dropdown-menu__link">Санкт-Петербург<div class="arrow-down"></div>
                     </a>
                     <ul class="dropdown-menu__list dropdown-list">
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Казань</a></li>
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Набережные Челны</a></li>
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Севастополь</a></li>
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Краснодар</a></li>
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Владивосток</a></li>
-                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Сочи</a></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Казань<input value="kazan" class="dropdown-list__radio" type="radio"></label></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Набережные Челны<input value="chelny" class="dropdown-list__radio" type="radio"></label></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Севастополь<input value="sevastopol" class="dropdown-list__radio" type="radio"></label></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Краснодар<input value="krasnodar" class="dropdown-list__radio" type="radio"></label></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Владивосток<input value="vladik" class="dropdown-list__radio" type="radio"></label></li>
+                        <li class="dropdown-list__item"><label class="dropdown-list__label">Сочи<input value="sochi" class="dropdown-list__radio" type="radio"></label></li>
                     </ul>
                 </div>
             </li>
-            <li class="nav__item"><a href="#" class="nav__link">Условия работы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Требования</a></li>
+            <li class="nav__item"><a href="#conditions" class="nav-anchor nav__link">Условия работы</a></li>
+            <li class="nav__item"><a href="#requirements" class="nav-anchor nav__link">Требования</a></li>
         </ul>
     </div>
+    <script>
+
+    </script>
     <div class="header__action">
         <div class="jumbotron">
             <h1 class="title">Есть автомобиль?</h1>
