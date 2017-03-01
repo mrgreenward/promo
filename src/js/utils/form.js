@@ -1,35 +1,31 @@
 $(document).ready(function(){
-    (function(){
-        var  form = $('.form'),
-            fieldError = ('input--error'),
-            fieldSuccess = ('input--success');
-        var message = 'заполните пустые поля!';
-      formVal = {
-          'checkNull': function () {
-              $('.form .input').removeClass(fieldSuccess).removeClass(fieldError);
+    (function () {
+           var message = 'заполните поле';
+        var errors = [];
+        function validate(){
+            errors = [];
 
-                $('.form .input').each(function (i, el) {
-                    if ($(this).val().length <= 0){
-                        formVal.errors = true;
-                        $(this).removeClass(fieldSuccess).addClass(fieldError);
-                        $('.input--error').attr('placeholder', message);
-                        return false
-                    }else{
-                        formVal.errors = false;
-                        $(this).removeClass(fieldError).addClass(fieldSuccess);
-                    }
-                })
-          },
-          'send': function () {
-              if(!formVal.errors){
-                  form.submit();
-              }
-          }
-      }
-     $('.btn--form').on('click',function () {
-         formVal.checkNull();
-         formVal.send();
-         return false;
-     })
+            $('.input').removeClass('input--success input--error')
+
+            $('.input').each(function (i,el) {
+                var val = $(el).val();
+                val = $.trim(val);
+
+                if (!val){
+                    $(el).addClass('input--error').attr('placeholder', message);
+                    errors.push(true);
+                }else{
+                    $(el).addClass('input--success').attr('placeholder', '');
+                    errors.push(false);
+                }
+                $(el).val(val)
+            })
+        }
+        $('.btn--form').on('click',function () {
+            validate();
+            if (errors.indexOf(true)+1){
+                return false
+            }
+        })
     })();
 })

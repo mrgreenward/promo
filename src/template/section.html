@@ -236,8 +236,7 @@
                                   <div class="form__wrap form__wrap--city">
                                       <p class="b-article__text">Ваш город :</p>
                                       <div class="dropdown-menu form__city">
-                                          <a href="#" class="nav__link dropdown-menu__link b-article__link">Санкт-Петербург<div class="arrow-down"></div>
-                                          </a>
+                                          <a href="#" class="nav__link dropdown-menu__link b-article__link">Санкт-Петербург</a><div class="arrow-down"></div>
                                           <ul class="dropdown-menu__list dropdown-list">
                                               <li class="dropdown-list__item"><label class="dropdown-list__label">Казань<input value="kazan" class="dropdown-list__radio" type="radio"></label></li>
                                               <li class="dropdown-list__item"><label class="dropdown-list__label">Набережные Челны<input value="chelny" class="dropdown-list__radio" type="radio"></label></li>
@@ -245,6 +244,7 @@
                                               <li class="dropdown-list__item"><label class="dropdown-list__label">Краснодар<input value="krasnodar" class="dropdown-list__radio" type="radio"></label></li>
                                               <li class="dropdown-list__item"><label class="dropdown-list__label">Владивосток<input value="vladik" class="dropdown-list__radio" type="radio"></label></li>
                                               <li class="dropdown-list__item"><label class="dropdown-list__label">Сочи<input value="sochi" class="dropdown-list__radio" type="radio"></label></li>
+                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Санкт-Петербург<input checked="checked" value="piter" class="dropdown-list__radio" type="radio"></label></li>
                                           </ul>
                                       </div>
                                   </div>
@@ -264,7 +264,7 @@
                               <div class="grid__item">
                                   <div class="form__wrap">
                                       <label class="label b-article__text">Контактный телефон</label>
-                                      <input class="input input--number" type="text">
+                                      <input class="input input--number" type="number">
                                   </div>
                                   <div class="form__wrap form__wrap--text">
                                       <p class="descr b-article__text">Пожалуйста, заполните форму.</p>
@@ -324,15 +324,15 @@
                       <table class="table">
                           <tr>
                               <td class="b-article__text">Адрес:</td>
-                              <td>Каширское шоссе,85</td>
+                              <td><span class="city-adress"></span></td>
                           </tr>
                           <tr>
                               <td class="b-article__text">Телефон</td>
-                              <td>+7(951)067-73-10</td>
+                              <td><span class="city-number"></span></td>
                           </tr>
                           <tr>
                               <td class="b-article__text">Email</td>
-                              <td>lex7310@ya.ru</td>
+                              <td><span class="city-mail"></span></td>
                           </tr>
                       </table>
                   </div>
