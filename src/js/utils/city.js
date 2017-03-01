@@ -16,15 +16,15 @@ $(document).ready(function () {
             });
 
             $(item).on('click', function () {
-                $(val).not($(val,this)).prop('checked', false);
-                $.cookie('city', $('.dropdown-list__radio:checked').val());
+                var root = $(this).parents('.dropdown-menu'),
+                currentText = $('.dropdown-list__radio:checked', this).parent('label').text();
 
-                var root = $(this).parents('.dropdown-menu');
-                var labelText = $('.dropdown-list__radio:checked').parent('label').text();
+                localStorage.setItem('city', $(val,this).val());
+                localStorage.setItem('cityChecked', currentText);
 
                 $('.arrow-down', root).removeClass('arrow-up');
-                $(list, root).slideUp('fast')
-                $(title).text(labelText);
+                $(list, root).slideUp('fast');
+                $(val).not($(val,this)).prop('checked', false);
             })
         }
         return this
@@ -32,35 +32,41 @@ $(document).ready(function () {
 
     (function () {
 
-        function setData(address,number,mail){
+        function setInfo(address,number,mail){
             $('.city-adress').text(address);
             $('.city-number').text(number);
             $('.city-mail').text(mail);
         }
 
-        function getAddress() {
-
-            switch($('.dropdown-list__radio:checked', '.dropdown-menu').val()){
+        function cityLoad() {
+            currentText = localStorage.getItem('cityChecked');
+            console.log(currentText);
+                if(!currentText){
+                    $('.dropdown-menu__link').text('Ваш город');
+                }else{
+                    $('.dropdown-menu__link').text(localStorage.getItem('cityChecked'));
+                }
+            switch(localStorage.getItem('city')){
                 case 'piter':
-                    return  setData('проспект Владимирский,82','8(927)-982-872','piter@mail.ru')
+                    return  setInfo('проспект Владимирский,82','8(927)-982-872','piter@mail.ru')
                 case 'chelny':
-                    return  setData('Проспект Набережночелнинский, строение1,2 офис','8(231)-12-872','chelny@mail.ru');
+                    return  setInfo('Проспект Набережночелнинский, строение1,2 офис','8(231)-12-872','chelny@mail.ru');
                 case 'kazan':
-                    return  setData('Фрунзе, строение2,2 офис','8(443)-12-872','kazan@mail.ru');
+                    return  setInfo('Фрунзе, строение2,2 офис','8(443)-12-872','kazan@mail.ru');
 
                 case 'krasnodar':
-                    return  setData('Мира, строение2,2 офис','8(213)-12-872','krasnodar@mail.ru');
+                    return  setInfo('Мира, строение2,2 офис','8(213)-12-872','krasnodar@mail.ru');
                 case 'sevastopol':
-                    return  setData('Пушкина, строение2,2 офис','8(213)-12-872','seva@mail.ru');
+                    return  setInfo('Пушкина, строение2,2 офис','8(213)-12-872','seva@mail.ru');
                 default:
-                    return  setData('Каширское шоссе','8(22213)-12-872','asdsad@mail.ru');
+                    return  setInfo('Каширское шоссе','8(22213)-12-872','asdsad@mail.ru');
             }
         }
         $(window).on('load',function () {
-            getAddress()
+            cityLoad();
         })
             $('.dropdown-list__radio').on('change', function () {
-                getAddress()
+                cityLoad();
             })
 
     })(); //вывести адреса и данные в футер контактов
