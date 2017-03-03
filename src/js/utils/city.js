@@ -24,6 +24,8 @@ $(document).ready(function () {
 
                 $('.arrow-down', root).removeClass('arrow-up');
                 $(list, root).slideUp('fast');
+                $('.dropdown-menu__link').text(currentText);
+
                 $(val).not($(val,this)).prop('checked', false);
             })
         }
@@ -40,7 +42,6 @@ $(document).ready(function () {
 
         function cityLoad() {
             currentText = localStorage.getItem('cityChecked');
-            console.log(currentText);
                 if(!currentText){
                     $('.dropdown-menu__link').text('Ваш город');
                 }else{

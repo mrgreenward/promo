@@ -1,7 +1,9 @@
 .modal{
   display: none;
+  overflow: auto;
   transition: 1s linear;
   z-index: 999;
+  width: 100%;
   max-width: 650px;
   padding: 1em;
   margin: 1em;
@@ -9,13 +11,20 @@
   background: $white;
   position: fixed;
   box-shadow: $shadow;
-  top: 0;
-  right: 0;
+  top:0;
+  left:0;
+  right:0;
   bottom: 0;
-  left: 0;
   margin: auto;
   @media all and (max-width: $breakpoint-md) {
-    margin: auto 1em;
+    margin: auto;
+    max-width: 450px;
+    max-height: 600px;
+  }
+  @media all and (max-width: $breakpoint-md) {
+    margin: auto;
+    max-width: 250px;
+    max-height: 300px;
   }
   &__close{
     float:right;

@@ -1,5 +1,6 @@
 .b-vidget{
   position: relative;
+  overflow: hidden;
   max-width: 363px;
   min-width: 320px;
   margin: 0 auto;
@@ -10,22 +11,23 @@
   &--sec{
     background: $gradient-secondary;
   }
+  &__type{
+    min-width: 110px;
+    max-width: 115px;
+  }
   &__btn{
     margin-top: 5.125em;
   }
   &__icon{
-      max-width: 143px;
+      min-width: 88px;
       height: 170px;
-
-    position: absolute;
-    bottom: 0;
-    max-width: 144px;
-    min-width: 100px;
-  }
+      max-width: 122px;
+}
 }
 .icon-gadget{
   width: 100%;
   height: 170px;
+  margin-top: 26px;
   border-radius: 15px;
 }
 @media all and (max-width: 512px) {
@@ -33,10 +35,12 @@
     max-width: 300px;
     min-width: 280px;
     &__icon{
-    max-width: 80px;
+    width: 88px;
   }
     &__btn{
       font-size: 0.7em;
     }
+  }
+  .icon-gadget{
   }
 }

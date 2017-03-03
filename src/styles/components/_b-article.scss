@@ -6,6 +6,7 @@
   align-items: center;
   text-align: center;
   margin: 0 auto 1.250em;
+  word-wrap: break-word;
   word-break: break-word;
   &__wrap{
     width: 100%;
@@ -28,6 +29,8 @@
     margin-top: 1em;
   }
   &__text{
+    display: block;
+    max-width: 100%;
     color: $gray;
     line-height: 1.3;
     margin:0.338em 0 ;
@@ -59,7 +62,7 @@
   }
 }
 td.b-article__text {
-  width: 80px;
+  max-width: 160px;
 }
 a.b-article__text:hover{
   color: $black;

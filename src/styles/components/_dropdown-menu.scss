@@ -6,7 +6,7 @@
   width: 1em;
   margin: 0 0.5em;
   height: 1em;
-  background:url("/img/down-arrow.svg")no-repeat no-repeat;
+  background:url("../img/down-arrow.svg")no-repeat no-repeat;
 }
 .arrow-up{
   transform: rotate(180deg);
@@ -22,7 +22,7 @@
 .dropdown-list{
   position: absolute;
   border: 1px solid gray;
-  width: 12.063rem;
+  width: 200px;
   word-wrap: break-word;
   margin: 0.5em;
   background-color: $white;
@@ -30,15 +30,19 @@
   border-radius: 6px;
   box-shadow: $shadow;
   display: none;
+
   &__label{
     width:inherit;
     border: none;
     display: block;
     line-height: 1.2;
     text-decoration: none;
-    padding:0.4em 0.6em;
+    padding:0.4em 0.8em;
     color:$black;
     font-size: 0.9em;
+    @media all and (max-width: $breakpoint-sm){
+    font-size: 1.1em;
+    }
   }
   &__radio{
     display: none;
@@ -53,7 +57,6 @@
   }
   .dropdown-menu__list{
     position: absolute;
-    max-width: 12.063rem;
     margin: 0.5em 0;
   }
   .dropdown-list {

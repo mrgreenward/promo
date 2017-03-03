@@ -57,6 +57,7 @@ background: $bg-primary;
 }
 .form-grid{
 flex-direction: column;
+  flex-wrap: wrap;
 }
 .b-article__link{
   margin: 1em 0;
@@ -73,4 +74,12 @@ flex-direction: column;
   .form-grid{
     flex-direction: row;
   }
+}
+@media all and (max-width: $breakpoint-sm) {
+  .form__wrap--city{
+    flex-direction: column;
   }
+  .form__city{
+    margin-top: 0.5em;
+  }
+}
