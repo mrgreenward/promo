@@ -85,9 +85,13 @@ $(document).ready(function(){
                 },
                 success: function (data, textStatus, jqXHR) {
                     console.log(data, textStatus, jqXHR);
+                    $('.btn--form').attr('data-modal', '.modal-success').Modal();
+
                 },
                 fail: function (jqXHR, textStatus) {
-                    console.log(jqXHR, textStatus);
+                    console.log('jqXHR, textStatus');
+                    $('.btn--form').prop('data-modal', null).attr('data-modal', '.modal-fail').Modal();
+
                 },
                 complete: function (jqXHR, textStatus) {
                     $('.form').trigger('reset');
@@ -97,6 +101,7 @@ $(document).ready(function(){
         }
 
         $('.btn--form').on('click', function (e) {
+            var self = $(this);
             e.preventDefault();
             validate();
             if (errors.indexOf(true) + 1) {

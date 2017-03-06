@@ -162,7 +162,9 @@
                           <div class="grid__row grid__row--sm">
                               <script>
                                   $(document).ready(function() {
-                                     $('.btn--js-uber').Modal();
+                                     $('.btn--js-uber').on('click',function () {
+                                         $(this).Modal();
+                                     })
                                   })
                               </script>
                               <div class="grid__item">
@@ -182,9 +184,11 @@
                   <div class="grid__item grid__item--sm"><div class="grid b-vidget b-vidget--sec">
                       <div class="grid__row grid__row--sm">
                           <div class="grid__item">
-                              <script>
+                                  <script>
                                   $(document).ready(function() {
-                                      $(' .btn--js-gett').Modal();
+                                      $('.btn--js-gett').on('click',function () {
+                                          $(this).Modal();
+                                      })
                                   })
                               </script>
                               <div class="b-vidget__type">
@@ -205,7 +209,9 @@
                           <div class="grid__item">
                               <script>
                                   $(document).ready(function() {
-                                      $('.btn--js-ya').Modal();
+                                      $('.btn--js-ya').on('click',function () {
+                                          $(this).Modal();
+                                      })
                                   })
                               </script>
                               <div class="b-vidget__type">
@@ -269,7 +275,7 @@
                                       <p class="descr b-article__text">Пожалуйста, заполните форму.</p>
                                       <p class="descr b-article__text">После отправки формы с Вами свяжется менеджер из
                                           нашей службы поддержки и проконсультирует по поводу дальнейших действий</p>
-                                          <button class="btn btn--form  btn--primary form__btn">Отправить</button>
+                                          <button class="btn btn--form  btn--primary form__btn" >Отправить</button>
                                   </div>
                                   </div>
                               <div class="grid__item grid__item--drivers">

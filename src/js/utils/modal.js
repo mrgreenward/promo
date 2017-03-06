@@ -6,10 +6,7 @@ $(document).ready(function () {
 
                 var modal = $(this).data('modal'),
                     backdropEl = '<div class="modal-backdrop"></div>';
-        
-                $this.on('click', function (e) {
-                    e.preventDefault();
-
+                
                     $(modal).after(backdropEl); //добавить элемент стенку
                     $('.modal-backdrop').fadeIn(100, function () {
                         $(modal).css('display', 'block').animate({opacity: 1}, 100); //анимация
@@ -25,7 +22,6 @@ $(document).ready(function () {
                         });
                     });
 
-                })
             })
         }
     })($)

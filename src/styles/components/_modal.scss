@@ -40,6 +40,12 @@
   }
   &__content{
     position: relative;
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__content--video{
+    position: relative;
     padding-bottom: 56.25%;
     padding-top: 0;
     height: 100%;
