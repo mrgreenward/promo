@@ -51,18 +51,27 @@ $(document).ready(function () {
 
             switch(localStorage.getItem('city')){
                 case 'piter':
-                    return  setInfo('проспект Владимирский,82','8(927)-982-872','piter@mail.ru')
+                    return  setInfo('ул. Ремесленная, д.17, оф. 301','89110869488','kirindil@yandex.ru')
                 case 'chelny':
-                    return  setInfo('Проспект Набережночелнинский, строение1,2 офис','8(231)-12-872','chelny@mail.ru');
+                    return  setInfo('','','');
                 case 'kazan':
-                    return  setInfo('Фрунзе, строение2,2 офис','8(443)-12-872','kazan@mail.ru');
-
+                    return  setInfo('Чистопольская 7, 1 эт','89375809000, 89600400512', '');
                 case 'krasnodar':
-                    return  setInfo('Мира, строение2,2 офис','8(213)-12-872','krasnodar@mail.ru');
-                case 'sevastopol':
-                    return  setInfo('Пушкина, строение2,2 офис','8(213)-12-872','seva@mail.ru');
+                    return  setInfo('Р-н Фестивальный, Монтажников 3, офис 14, 2 этаж','79615180501','incarkrd@gmail.com');
+                case 'ekaterinburg':
+                    return  setInfo('ул.Бебеля 112, автомагазин "Partera"','+7-928-622-82-28','gett.taxi@bk.ru');
+                case 'samara':
+                    return  setInfo('ул. Галактионовская, дом 118а','89276570102 ','uber-63@yandex.ru');
+                case 'sochi':
+                    return  setInfo('Красноармейская, 3А, 6эт, 46кабинет','+79884038890','');
+                case 'ufa':
+                    return  setInfo('ул. Менделеева 177 ТЦ "Чайка" 6 этаж','8(347)2991722, 89093491722 ','');
+                case 'voronezh':
+                    return  setInfo('Район Ленинский, Свободы 75А, офис 418, 4 этаж (БЦ Калина)','+7(909)212-13-20','gettvoz@gmail.com');
+                case 'volgograd':
+                    return  setInfo('Район Дзержинский, ул. Землячки,д.58 ','8-937-555-04-90','lep.maks@gmail.com');
                 default:
-                    return  setInfo('Каширское шоссе','8(22213)-12-872','asdsad@mail.ru');
+                    return  setInfo('');
             }
         }
 

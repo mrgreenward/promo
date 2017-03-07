@@ -26,6 +26,9 @@
     max-width: 250px;
     max-height: 300px;
   }
+  &--status{
+    max-height: 150px;
+  }
   &__close{
     float:right;
     cursor: pointer;
@@ -50,6 +53,11 @@
     padding-top: 0;
     height: 100%;
     overflow: hidden;
+  }
+  &__text{
+    font-size: 1.4em;
+    font-weight: 100;
+    line-height: 1.5;
   }
 }.modal-backdrop{
   display: none;
