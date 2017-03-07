@@ -22,6 +22,7 @@ var path = {
     dist : {
         html : 'dist/',
         js : 'dist/js',
+        vendorJs : 'dist/js/vendors/',
         style: 'dist/styles/',
         img: 'dist/img/',
         fonts: 'dist/fonts/'
@@ -29,13 +30,15 @@ var path = {
     build : {
         html : 'build/',
         js : 'build/js',
+        vendorJs : 'build/js/vendors/',
         style: 'build/styles/',
         img: 'build/img/',
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html',
-        js: 'src/js/**/*.js',
+        js: 'src/js/main.js',
+        vendorJs : 'src/js/vendors/**/*.*',
         style: 'src/styles/style.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -90,7 +93,16 @@ gulp.task('js:build', function () {
             //else
             gulp.dest(path.build.js)))
         .pipe(reload({stream: true}));
+
 });
+gulp.task('vendorJs:build',function () {
+    gulp.src(path.src.vendorJs)
+        .pipe(gulpIfElse(argv.production,
+            gulp.dest(path.dist.vendorJs),
+            //else
+            gulp.dest(path.build.vendorJs)))
+});
+
 //styles
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
@@ -128,6 +140,7 @@ gulp.task('fonts:build', function() {
 // get all
 gulp.task('build', [
     'html:build',
+    'vendorJs:build',
     'js:build',
     'style:build',
     'fonts:build',
