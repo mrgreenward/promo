@@ -53,16 +53,17 @@
                     <div class="b-article b-article--aligned-left">
                         <p class="b-article__text b-article__text--upper">Количество рабочих дней /Мес</p>
                         <div class="b-article__slider slider">
-                            <h1 class="slider__count">22</h1>
-                            <!--  <div class="slider__line"></div>
-                              <div class="slider__circle"></div>
-                              <div class="slider__line slider__line--gray"></div> -->
+                            <h1 class="slider__count slider__count--js">22</h1>
+                             <div id="slider-line" class="slider__line">
+                                 <div id="slider-circle" class="slider__circle"></div>
+                             </div>
                           </div>
                           <div class="b-article__wrap">
                               <table class="table">
                                   <tr>
                                       <td class="b-article__text">Пройденный путь</td>
-                                      <td>150 км</td>
+                                      <td class="table__text">
+                                          <span class="table__text-js-km">1760</span> км</td>
                                   </tr>
                                   <tr>
                                       <td class="b-article__text">Количество заказов</td>
@@ -70,7 +71,7 @@
                                   </tr>
                                   <tr>
                                       <td class="b-article__text">Средний чек за заказ</td>
-                                      <td>200 р</td>
+                                      <td>245 р</td>
                                   </tr>
                               </table>
                           </div>
@@ -79,7 +80,9 @@
                   <div class="grid__item">
                       <div class="b-article b-article--aligned-right">
                           <p class="b-article__text b-article__text--upper">За 1 месяц я накоплю</p>
-                          <p class="title-md">54 150 руб</p>
+                         <div class="b-article__wrap">
+                             <p class="title-md title-md--js-sum">53900</p>
+                             <span class="title-md "> руб</span></div>
                           <p class="b-article__text b-article__text--sm">Выше указана приблизительная сумма дохода для усредненных показателей</p>
                       </div>
                   </div>

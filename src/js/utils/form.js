@@ -84,7 +84,7 @@ $(document).ready(function(){
                     $('.btn--form').prop('disabled',true);
                 },
                 success: function (data, textStatus, jqXHR) {
-                    console.log(data, textStatus, jqXHR);
+                /*    console.log(data, textStatus, jqXHR);*/
                     $('.btn--form').attr('data-modal', '.modal-success').Modal();
 
                 },

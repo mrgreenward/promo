@@ -1,3 +1,4 @@
+//= utils/slider.js
 //= utils/checkbrowsers.js
 //= utils/youtube.js
 //= utils/mobile.js

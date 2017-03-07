@@ -92,6 +92,9 @@ a.b-article__text:hover{
 .geo{
 max-width: 100%;
 }
+.b-article__wrap .title-md{
+  display: inline-block;
+}
 
 @media all and (max-width: $breakpoint-lg) {
   .b-article{

@@ -6,11 +6,13 @@
     text-align: left;
     font-size: 1.5em;
     margin-left: 1em;
+    margin-bottom: 0.7em;
     font-weight:600;
   }
   &__line{
     display: inline-block;
-    width: 50%;
+    width: 80%;
+    height: 0px;
     border: 1px solid $button-primary;
   }
   &__line--gray{
@@ -19,13 +21,15 @@
     border: 1px solid $gray;
   }
   &__circle{
-    position: absolute;
-    right: 45%;
+    position: relative;
     display: inline-block;
+    top: -15px;
+    left: 125px;
     width: 26px;
     height: 26px;
     background-color: $button-primary;
     border-radius: 15px;
+    cursor: pointer;
   }
 
 }
