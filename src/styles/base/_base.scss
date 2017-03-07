@@ -1,5 +1,7 @@
 body{
   position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
   font-family: $primary-font;
 }
 /*.b-page{
@@ -10,8 +12,6 @@ body{
 }*/
 .b-page{
   position: relative;
-  max-width: 1600px;
-  margin: 0 auto;
   &__footer-title{
     margin: 1em 0;
   }

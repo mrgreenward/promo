@@ -17,13 +17,13 @@
   bottom: 0;
   margin: auto;
   @media all and (max-width: $breakpoint-md) {
+    max-width: calc(100% - 60px);
     margin: auto;
-    max-width: 450px;
-    max-height: 600px;
+    max-height: 400px;
   }
-  @media all and (max-width: $breakpoint-md) {
+  @media all and (max-width: $breakpoint-sm) {
     margin: auto;
-    max-width: 250px;
+    max-width: calc(100% - 60px);
     max-height: 300px;
   }
   &--status{
@@ -58,6 +58,9 @@
     font-size: 1.4em;
     font-weight: 100;
     line-height: 1.5;
+    @media all and (max-width: $breakpoint-sm) {
+      font-size: 1.2em;
+    }
   }
 }.modal-backdrop{
   display: none;
