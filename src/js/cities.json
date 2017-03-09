@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Набережные Челны",
+    "value": "chelny",
+    "address": "",
+    "number": "",
+    "mail": ""
+  },
+  {
+    "name": "Казань",
+    "value": "kazan",
+    "address": "Чистопольская 7, 1 эт",
+    "number": "89375809000 89600400512",
+    "mail": ""
+  },
+  {
+    "name": "Санкт-Петербург",
+    "value": "piter",
+    "address": "ул. Ремесленная, д.17, оф. 301",
+    "number": "89110869488",
+    "mail": "kirindil@yandex.ru"
+  },
+  {
+    "name": "Краснодар",
+    "value": "krasnodar",
+    "address": "Р-н Фестивальный, Монтажников 3, офис 14, 2 этаж",
+    "number": "79615180501",
+    "mail": "incarkrd@gmail.com"
+  },
+  {
+    "name": "Екатеринбург",
+    "value": "ekaterinburg",
+    "address": "ул.Бебеля 112, автомагазин \"Partera\"",
+    "number": "+7-928-622-82-28",
+    "mail": "gett.taxi@bk.ru"
+  },
+  {
+    "name": "Самара",
+    "value": "samara",
+    "address": "ул. Галактионовская, дом 118а",
+    "number": "89276570102 ",
+    "mail": "uber-63@yandex.ru"
+  },
+  {
+    "name": "Сочи",
+    "value": "sochi",
+    "address": "Красноармейская, 3А, 6эт, 46кабинет",
+    "number": "+79884038890",
+    "mail": ""
+  },
+  {
+    "name": "Уфа",
+    "value": "ufa",
+    "address": "ул. Менделеева 177 ТЦ \"Чайка\" 6 этаж",
+    "number": "8(347)2991722, 89093491722 ",
+    "mail": ""
+  },
+  {
+    "name": "Воронеж",
+    "value": "voronezh",
+    "address": "Район Ленинский, Свободы 75А, офис 418, 4 этаж (БЦ Калина)",
+    "number": "+7(909)212-13-20",
+    "mail": "gettvoz@gmail.com"
+  },
+  {
+    "name": "Волгоград",
+    "value": "volgograd",
+    "address": "Район Дзержинский, ул. Землячки,д.58 ",
+    "number": "8-937-555-04-90",
+    "mail": "lep.maks@gmail.com"
+  }
+]

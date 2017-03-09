@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    babel = require('gulp-babel'),
     reload = browserSync.reload,
     bust = require('gulp-buster'),
     argv = require('yargs').argv, //передача параметров таска из консоли

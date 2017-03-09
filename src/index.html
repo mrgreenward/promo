@@ -16,12 +16,12 @@
     var isAndroidNative = ((ua.indexOf('Mozilla/5.0') > -1) && (ua.indexOf('Android') > -1) && !(ua.indexOf('Chrome') > -1) && (ua.indexOf('Version') > -1));
     //document.write('' + 'Browser name = ' + objbrowserName + '<br>' + 'Full version = ' + objfullVersion + '<br>' + 'Major version = ' + objBrMajorVersion + '<br>' + 'navigator.appName = ' + navigator.appName + '<br>' + 'ua = ' + navigator.userAgent + '<br>')
 if(isAndroidNative || navigator.userAgent.match('MSIE 8.0') || navigator.userAgent.match('MSIE 9.0')) {
-    window.location = '/oldbrowser/index.html';
+    window.location = 'oldbrowser/index.html';
 }
 $(document).ready(function () {
     setTimeout(function () {
         $('.preloader').fadeOut();
-    },1000);
+    },2000);
 })
 </script>
 <div class="b-page">

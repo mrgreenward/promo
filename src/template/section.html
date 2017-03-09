@@ -234,55 +234,45 @@
       </div>
   </div>
   <div class="b-page__section">
-      <div class="section">
+      <div  class="section">
           <h1 class="title section__title">Анкета нового Водителя</h1>
           <div class="grid">
                   <div class="grid__item">
-                      <form class="form">
+                      <form id="driver_request" class="form">
                           <div class="grid__row grid__row--sm">
                               <div class="grid__item">
-                                  <div class="form__wrap form__wrap--city">
-                                      <p class="b-article__text">Выберите город :</p>
-                                      <div class="dropdown-menu dropdown-menu--city form__city">
-                                          <a href="javascript:void(0)" class="nav__link dropdown-menu__link b-article__link">Ваш город</a><div class="arrow-down"></div>
-                                          <ul class="dropdown-menu__list dropdown-list">
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Казань<input value="kazan" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Набережные Челны<input value="chelny" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Самара<input value="samara" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Краснодар<input value="krasnodar" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Сочи<input  value="sochi" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Санкт-Петербург<input value="piter" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Екатеринбург<input value="ekaterinburg" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Уфа<input value="ufa" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Воронеж<input value="voronezh" class="dropdown-list__radio" type="radio"></label></li>
-                                              <li class="dropdown-list__item"><label class="dropdown-list__label">Волгоград<input value="volgograd" class="dropdown-list__radio" type="radio"></label></li>
-                                          </ul>
+                                  <div class="form-col">
+                                      <div class="form__wrap form__wrap--city">
+                                          <p class="b-article__text">Выберите город :</p>
+                                          <div class="dropdown-menu dropdown-menu--city form__city">
+                                              <a href="javascript:void(0)" class="nav__link dropdown-menu__link b-article__link">Ваш город</a><div class="arrow-down"></div>
+                                          </div>
                                       </div>
-                                  </div>
-                                  <div class="form__wrap">
-                                      <label class="label b-article__text">Фамилия</label>
-                                      <input class="input input--surname" type="text">
-                                  </div>
-                                  <div class="form__wrap">
-                                      <label class="label b-article__text">Имя Отчество</label>
-                                      <input class="input input--fo" type="text">
-                                  </div>
-                                  <div class="form__wrap">
-                                      <label class="label b-article__text">Автомобиль, Год</label>
-                                      <input class="input input--car" type="text">
+                                      <div class="form__wrap">
+                                          <label class="label b-article__text">Фамилия</label>
+                                          <input class="input input--surname" type="text">
+                                      </div>
+                                      <div class="form__wrap">
+                                          <label class="label b-article__text">Имя Отчество</label>
+                                          <input class="input input--fo" type="text">
+                                      </div>
+                                      <div class="form__wrap">
+                                          <label class="label b-article__text">Автомобиль, Год</label>
+                                          <input class="input input--car" type="text">
+                                      </div>
                                   </div>
                               </div>
                               <div class="grid__item">
-                                  <div class="form__wrap">
+                                  <div class="form-col">    <div class="form__wrap">
                                       <label class="label b-article__text">Контактный телефон</label>
                                       <input class="input input--number" type="number">
                                   </div>
-                                  <div class="form__wrap form__wrap--text">
-                                      <p class="descr b-article__text">Пожалуйста, заполните форму.</p>
-                                      <p class="descr b-article__text">После отправки формы с Вами свяжется менеджер из
-                                          нашей службы поддержки и проконсультирует по поводу дальнейших действий</p>
+                                      <div class="form__wrap form__wrap--text">
+                                          <p class="descr b-article__text">Пожалуйста, заполните форму.</p>
+                                          <p class="descr b-article__text">После отправки формы с Вами свяжется менеджер из
+                                              нашей службы поддержки и проконсультирует по поводу дальнейших действий</p>
                                           <button class="btn btn--form  btn--primary form__btn" >Отправить</button>
-                                  </div>
+                                      </div></div>
                                   </div>
                               <div class="grid__item grid__item--drivers">
                                   <div class="b-article b-article--aligned-left">

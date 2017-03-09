@@ -3,6 +3,9 @@
   max-width: 500px;
   &__btn{
     margin-top: 1.5em;
+    display: inline-block;
+    color: $black;
+    text-decoration: none;
   }
 }
 .title{

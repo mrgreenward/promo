@@ -1,5 +1,4 @@
 .form{
-background: $bg-primary;
   position: relative;
   &__wrap{
     min-width: 200px;
@@ -88,4 +87,16 @@ flex-direction: column;
 }
 .success{
   color: $success;
+}
+.form-col{
+  background: $bg-primary;
+  margin: -1.250rem;
+  padding: 1.250rem;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
