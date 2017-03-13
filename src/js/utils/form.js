@@ -25,7 +25,7 @@ $(document).ready(function(){
             });// check values from inputs
 
             var cityVal = $('.dropdown-list__radio:checked', '.form').val();
-            if (!cityVal && !localStorage.getItem('city')){ //check city checked
+            if (!cityVal){ //check city checked
                 $('.nav__link', '.form__city').addClass('error');
                 errors.push(true);
             }else{
@@ -37,35 +37,14 @@ $(document).ready(function(){
         }
 
         function sendData(){
-            var serverUrl = 'http://192.168.1.153:8080/form/';
+            var serverUrl = 'http://localhost:8080/form/';
 
             var city = $('.dropdown-list__radio:checked', '.form').val(),
                 surName = $('.input--surname', '.form').val(),
                 lastName = $('.input--fo', '.form').val(),
                 car = $('.input--car', '.form').val(),
                 number = $('.input--number', '.form').val();
-           /* fetch('serverUrl', {
-                method: 'post',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "city": city,
-                    "surName": surName,
-                    "lastName": lastName,
-                    "car":car,
-                    "number":number
-                }),
-            }).then(function (response) {
-                $('.btn--form').prop("disabled",true);
-                return response.json();
 
-            }).then(function (json) {
-                console.log('success: ', json)
-            }).catch(function (ex) {
-                console.log('failed: ', ex)
-            });*/
             $.ajax({
                 contentType: 'application/json; charset=utf-8',
                 url: serverUrl,
