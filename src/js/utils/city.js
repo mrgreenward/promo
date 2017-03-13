@@ -30,18 +30,21 @@ $(document).ready(function () {
                 var yaCity = ymaps.geolocation.city,
                 currentCity = localStorage.getItem('city');
 
-                var urlArr = yaCity.split(" ");
+                if (!yaCity || yaCity === undefined){
+                    console.log('fail to check city from yandex API')
+                    return false;
 
-                location.hash = ('?city='+ urlArr.join('+'));
-                window.location.hash.replace("#", "");
+                }else{
+                    var urlArr = yaCity.split(" ");
+                    location.hash = ('?city='+ urlArr.join("+")); //write to url
 
-
-                $.each(cityArr, function (i, city) {
+                    $.each(cityArr, function (i, city) {
                         if (yaCity === city.name && !currentCity) { //check city details from  cities[]
                             localStorage.setItem('city', city.value);
                             localStorage.setItem('cityChecked', city.name);
                         }
                     });
+                }
             });
         };
         this.onRenderFooter = function () {
