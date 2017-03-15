@@ -1,45 +1,49 @@
-
 $(document).ready(function () {
 
-    function Cities() {
-        var cityArr = [];
-        var _this = this;
-        this.getData = function () {
+    function ajax() {
 
-            $.ajax({
-                dataType: "json",
-                url: '/cities.json',
-                async: false,
-                success: function (cities) {
-                    cityArr = cities;
-                }
-            });
-        };
+        return $.ajax({
+            dataType: "json",
+            url: '/cities.json',
+            success: function (cities) {
 
-        this.onRenderCities = function () {
-            var items = cityArr.map(function (item) {
-                return ('<li class="dropdown-list__item">' +
-                '<label class="dropdown-list__label">' + item.name + '<input value="' + item.value + '" class="dropdown-list__radio" type="radio">' +
-                '</label>' +
-                '</li>')
-            });
-            $('.dropdown-menu__link').after('<ul class="dropdown-menu__list dropdown-list"></ul>');
-            $('.dropdown-list').append(items);
-        };
+                var cityArr = cities;
 
-        this.onCheckGeo = function () {
-            ymaps.ready(function init (){
-                var yaCity = ymaps.geolocation.city,
-                currentCity = localStorage.getItem('city');
+                var items = cityArr.map(function (item) {
+                    return ('<li class="dropdown-list__item">' +
+                    '<label class="dropdown-list__label">' + item.name + '<input value="' + item.value + '" class="dropdown-list__radio" type="radio">' +
+                    '</label>' +
+                    '</li>')
+                });
+                $('.dropdown-menu__link').after('<ul class="dropdown-menu__list dropdown-list"></ul>');
+                $('.dropdown-list').append(items);
 
-                if (!yaCity || yaCity === undefined){
+                renderCityData(cityArr);
+            }
+        });
+    }
+
+    function renderCityData(cityArr) {
+
+        var currentCity = localStorage.getItem('city');
+
+        if (typeof ymaps == "undefined" || !ymaps) {
+            return false;
+        }
+        else {
+            ymaps.ready(function init() {
+                var yaCity = ymaps.geolocation.city;
+
+
+                if (!yaCity || yaCity === undefined) {
                     console.log('fail to check city from yandex API')
                     return false;
 
-                }else{
+                } else {
                     var url = yaCity.split(" ");
-                    location.hash = ('city='+ url.join("+")); //write to url
-                };
+                    location.hash = ('city=' + url.join("+")); //write to url
+                }
+                ;
 
                 $.each(cityArr, function (i, city) {
                     if (yaCity === city.name && !currentCity) { //check city details from  cities[]
@@ -47,38 +51,31 @@ $(document).ready(function () {
                         localStorage.setItem('cityChecked', city.name);
                     }
                 });
+                updateCityData(cityArr);
             });
-        };
-        this.onRenderFooter = function () {
-            var currentCityText = localStorage.getItem('cityChecked');
-            var currentCity = localStorage.getItem('city');
 
-            $('.dropdown-list__radio[value="' + currentCity + '"]').prop('checked', true); //set prop checked to element,from localstorage
-            if (currentCityText) {
-                $('.dropdown-menu__link').text(localStorage.getItem('cityChecked'));
-            } else {
-                $('.dropdown-menu__link').text('Ваш город');
-            }
-            $.each(cityArr, function (i, city) {
-                if (currentCity === city.value) { //check city details from  cities[]
-                    $('.city-adress').text(city.address);
-                    $('.city-number').text(city.number);
-                    $('.city-mail').text(city.mail);
-                }
-            });
-        };
-
-        this.init = function () {
-            this.getData();
-            this.onRenderCities();
-            this.onCheckGeo();
-            setTimeout(function () {
-                _this.onRenderFooter();
-            },2000);
         }
+
     };
-    var cities = new Cities();
-    cities.init();
+    function updateCityData(cityArr) {
+        var currentCityText = localStorage.getItem('cityChecked'),
+            currentCity = localStorage.getItem('city');
+
+        if (currentCityText) {
+            $('.dropdown-menu__link').text(localStorage.getItem('cityChecked'));
+        } else {
+            $('.dropdown-menu__link').text('Ваш город');
+        };
+
+        $('.dropdown-list__radio[value="' + currentCity + '"]').prop('checked', true); //set prop checked to element,from localstorage
+        $.each(cityArr, function (i, city) {
+            if (currentCity === city.value) { //check city details from  cities[]
+                $('.city-adress').text(city.address);
+                $('.city-number').text(city.number);
+                $('.city-mail').text(city.mail);
+            }
+        })
+    }
 
     (function ($) {
         $.fn.DropDown = function () {
@@ -108,19 +105,21 @@ $(document).ready(function () {
                 }
             });
             this.onItemClick = function () {
-                $('.dropdown-list__label', '.dropdown-menu--city').on('click', function () {
-                    $(city).not($(city, this)).prop('checked', false);
+                ajax().done(function (cityArr) {
+                    $('.dropdown-list__label', '.dropdown-menu--city').on('click', function () {
+                        $(city).not($(city, this)).prop('checked', false);
 
-                    var currentText = $('.dropdown-list__radio:checked', this).parent('label').text();// set title of this value
+                        var currentText = $('.dropdown-list__radio:checked', this).parent('label').text();// set title of this value
 
-                    localStorage.setItem('city', $(city, this).val());
-                    localStorage.setItem('cityChecked', currentText);
+                        localStorage.setItem('city', $(city, this).val());
+                        localStorage.setItem('cityChecked', currentText);
 
-                    self.onCloseMenu();
-                    $('.dropdown-menu__link').text(currentText);
+                        self.onCloseMenu();
+                        $('.dropdown-menu__link').text(currentText);
+                        updateCityData(cityArr); //reload data cheked city
+                    });
+                });
 
-                    cities.onRenderFooter();
-                })
             };
             this.onOutClick = function () {
                 $(document).on('click', function (e) {

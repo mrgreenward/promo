@@ -1,7 +1,7 @@
 
 var tag = document.createElement('script');
 
-tag.src = "http://www.youtube.com/iframe_api";
+tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -49,19 +49,8 @@ function onPlayerStateChange(event) {
         done = true;
     }
 }
-function stopVideo(frame) {
-    var id = $(frame).attr('id');
- switch (id){
-     case 'video_gett':
-        gett.stopVideo();
-         break;
-     case 'video_ya':
-         ya.stopVideo();
-         break;
-     case 'video_uber':
-         uber.stopVideo();
-         break;
-     default:
-         return;
- }
+function stopVideo() {
+    uber.stopVideo();
+    ya.stopVideo();
+    gett.stopVideo();
 }
