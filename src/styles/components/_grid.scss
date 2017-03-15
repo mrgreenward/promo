@@ -25,10 +25,10 @@
     }
     &--drivers{
       background-color: $white;
-      padding-left: 2.3em;
+      padding-left: 2.8em;
     }
     &--visible{
-      @media all and (max-width: 1100px) {
+      @media all and (max-width: 1154px) {
         display: none;
       }
     }

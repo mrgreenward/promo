@@ -3,11 +3,12 @@ $(document).ready(function () {
 
     function Cities() {
         var cityArr = [];
-
+        var _this = this;
         this.getData = function () {
+
             $.ajax({
                 dataType: "json",
-                url: 'js/cities.json',
+                url: '/cities.json',
                 async: false,
                 success: function (cities) {
                     cityArr = cities;
@@ -38,14 +39,14 @@ $(document).ready(function () {
                 }else{
                     var url = yaCity.split(" ");
                     location.hash = ('city='+ url.join("+")); //write to url
+                };
 
-                    $.each(cityArr, function (i, city) {
-                        if (yaCity === city.name && !currentCity) { //check city details from  cities[]
-                            localStorage.setItem('city', city.value);
-                            localStorage.setItem('cityChecked', city.name);
-                        }
-                    });
-                }
+                $.each(cityArr, function (i, city) {
+                    if (yaCity === city.name && !currentCity) { //check city details from  cities[]
+                        localStorage.setItem('city', city.value);
+                        localStorage.setItem('cityChecked', city.name);
+                    }
+                });
             });
         };
         this.onRenderFooter = function () {
@@ -66,15 +67,18 @@ $(document).ready(function () {
                 }
             });
         };
-    };
 
-    var CitiesList = new Cities();
-    CitiesList.getData();
-    CitiesList.onRenderCities();
-    CitiesList.onCheckGeo();
-    setTimeout(function () {
-        CitiesList.onRenderFooter();
-    },2000);
+        this.init = function () {
+            this.getData();
+            this.onRenderCities();
+            this.onCheckGeo();
+            setTimeout(function () {
+                _this.onRenderFooter();
+            },2000);
+        }
+    };
+    var cities = new Cities();
+    cities.init();
 
     (function ($) {
         $.fn.DropDown = function () {
@@ -115,7 +119,7 @@ $(document).ready(function () {
                     self.onCloseMenu();
                     $('.dropdown-menu__link').text(currentText);
 
-                    CitiesList.onRenderFooter();
+                    cities.onRenderFooter();
                 })
             };
             this.onOutClick = function () {
